@@ -50,6 +50,21 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-autoslug"
+version = "1.9.9"
+description = "An automated slug field for Django."
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-autoslug-1.9.9.tar.gz", hash = "sha256:79f88e9433c1c88d8d3f2bec60d65ca98bffaff6c072b78aa5fd99d0e84a13dd"},
+    {file = "django_autoslug-1.9.9-py2.py3-none-any.whl", hash = "sha256:81cb018944498f27f439d439687cf902212cafbdb8c74c8ca0307543a3d82907"},
+]
+
+[package.extras]
+cyrillic = ["pytils (>=0.2)"]
+translitcodec = ["translitcodec (>=0.3)"]
+
+[[package]]
 name = "psycopg"
 version = "3.1.18"
 description = "PostgreSQL database adapter for Python"
@@ -127,4 +142,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6439734e5949998e5339d48254bc1b7cc02502db372c7d71894d2d56e2532770"
+content-hash = "36b6b3025a1992eadabfa09b93bd4048873fb1d4c6f15756115eeb6ba309fcb4"
