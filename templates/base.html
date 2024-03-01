@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}OSINT Framework{% endblock title %} | Jasoos</title>
+</head>
+<body>
+    {% include "layouts/header.html" %}
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+    {% include "layouts/footer.html" %}
+</body>
+</html>
