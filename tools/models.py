@@ -8,7 +8,7 @@ class Tool(models.Model):
 
     tool_name = models.CharField(_("Tool Name"), max_length=50)
     tool_slug = AutoSlugField(populate_from="tool_name")
-    # tool_icon = models.ImageField(_("Icon"), upload_to=None, height_field=None, width_field=None, max_length=None)
+    tool_icon = models.ImageField(_("Icon"), upload_to="tools_icon", height_field=None, width_field=None, max_length=None, default="images/jasoos.svg")
 
     class Meta:
         verbose_name = _("Tool")

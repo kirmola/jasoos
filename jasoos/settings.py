@@ -56,8 +56,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+if DEBUG:
+    ROOT_URLCONF = 'jasoos.urls_dev'
+else:
+    ROOT_URLCONF = 'jasoos.urls'
 
-ROOT_URLCONF = 'jasoos.urls'
 
 TEMPLATES = [
     {
@@ -123,6 +126,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+STATIC_ROOT = BASE_DIR / "staticroot"
+
+MEDIA_URLS = "media/"
+MEDIA_ROOT = "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
