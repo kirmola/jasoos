@@ -1,2 +1,17 @@
 {% extends "base.html" %}
-{% block title %}{{tool.tool_name}}{% endblock title %}
+{% load static %}
+{% block custom_js %}
+<script src="{% static 'js/d3.js' %}"></script>
+{% endblock custom_js %}
+{% block title %}OSINT Tools{% endblock title %}
+
+{% block main %}
+
+
+
+
+{% for each_tool in all_tools  %}
+<a href="{% url "Tool_detail" tool_slug=each_tool.tool_slug %}">{{each_tool|linebreaks}}</a>
+{% endfor %}
+
+{% endblock main %}
