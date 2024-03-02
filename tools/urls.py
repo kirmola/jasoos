@@ -4,5 +4,5 @@ from .views import (
 )
 
 urlpatterns = [
-    path("<slug:tool_slug>/", ToolsDetailView.as_view(), name="tools_name")
+    path("<slug:tool_slug>/", ToolsDetailView.as_view(), name="Tool_detail")
 ]
